@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html>
-    <head>
+<!-- saved from url=(0056)https://travelerschosen.github.io/CheckpointQueueHelper/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <style>
             body{
                 
@@ -37,6 +37,8 @@
                 align-items: center;
                 border-radius: 12px;
                 cursor: pointer;
+                height: 30px;
+                font-size: 25px;
             }
 
             button.activity
@@ -72,6 +74,9 @@
                 justify-content: center;
                 border-radius: 12px;
                 cursor: pointer;
+                height: 50px;
+                align-items: center;
+                font-size: 20pt;
             }
             h1{
                 text-align: center;
@@ -105,10 +110,16 @@
             .typeText{
                 color: white;
                 text-align: center;
+                font-size: 20px;
             }
             .queueOptions{
                 color: aliceblue;
                 text-align: center;
+            }
+
+            .queueString{
+                color: yellow;
+                font-size: 40px;
             }
 
 
@@ -117,15 +128,15 @@
 <body>
     <div>
         <h1>Twitch Checkpoint Bot Queue Helper</h1>
-        <p class = "bungie-name">Bungie Name: <input type="text" id="bungiename" onkeyup="bungienamevalidator()"placeholder="bungiename#0000"></p>
-        <div class = "flex-parent selectorButtons">
+        <p class="bungie-name">Bungie Name: <input type="text" id="bungiename" onkeyup="bungienamevalidator()" placeholder="bungiename#0000"></p>
+        <div class="flex-parent selectorButtons">
             <button id="raidsSelect" class="activitytype" type="button" onclick="selectRaids()">Raids</button>
             <button id="dungeonsSelect" class="activitytype" type="button" onclick="selectDungeons()">Dungeons</button>
             <button id="storySelect" class="activitytype" type="button" onclick="selectOtherActivity()">Stories/Other</button>
         </div>
-        <div class = "mainButtons">
-            <div class = "actContainer">
-                <div id="raidsContainer" class="column33">
+        <div class="mainButtons">
+            <div class="actContainer">
+                <div id="raidsContainer" class="column33" style="display: block;">
                     <div id="raidsButtonContainer" class="column50">
                         <p class="typeText">Raid:</p>
                         <button class="activity" type="button" onclick="selectActivity('Salvation\'s Edge')">Salvation's Edge</button>
@@ -139,7 +150,7 @@
                         <button class="activity" type="button" onclick="selectActivity('Last Wish')">Last Wish</button>
                     </div>
                 </div>
-                <div id="dungeonsContainer" class="column33" style="display:none;">
+                <div id="dungeonsContainer" class="column33" style="display: none;">
                     <div id="dungeonsButtonContainer" class="column50">
                         <p class="typeText">Dungeon:</p>
                         <button class="activity" type="button" onclick="selectActivity('Warlord\'s Ruin')">Warlord's Ruin</button>
@@ -161,47 +172,55 @@
                     </div>    
                 </div>
             </div>
-            <div class = "encContainer">
+            <div class="encContainer">
                 <div id="encounterContainer" class="column33">
                     <div class="column50">
                         <p class="typeText" id="encountertext">Encounter:</p>
-                        <button id=encounter0button class="encounter" type="button" onclick="selectEncounter('encounter0button')">Encounter 0</button>
-                        <button id=encounter1button class="encounter" type="button" onclick="selectEncounter('encounter1button')">Encounter 1</button>
-                        <button id=encounter1hbutton class="encounter" type="button" onclick="selectEncounter('encounter1hbutton')">Encounter 1.5</button>
-                        <button id=encounter2button class="encounter" type="button" onclick="selectEncounter('encounter2button')">Encounter 2</button>
-                        <button id=encounter2hbutton class="encounter" type="button" onclick="selectEncounter('encounter2hbutton')">Encounter 2.5</button>
-                        <button id=encounter3button class="encounter" type="button" onclick="selectEncounter('encounter3button')">Encounter 3</button>
-                        <button id=encounter3hbutton class="encounter" type="button" onclick="selectEncounter('encounter3hbutton')">Encounter 3.5</button>
-                        <button id=encounter4button class="encounter" type="button" onclick="selectEncounter('encounter4button')">Encounter 4</button>
-                        <button id=encounter4hbutton class="encounter" type="button" onclick="selectEncounter('encounter4hbutton')">Encounter 4.5</button>
-                        <button id=encounter5button class="encounter" type="button" onclick="selectEncounter('encounter5button')">Encounter 5</button>
-                        <button id="otherEncounter1button" class="encounter" type="button" onclick="selectEncounter('otherEncounter1button')">1: Story Mission</button>
-                        <button id="otherEncounter2button" class="encounter" type="button" onclick="selectEncounter('otherEncounter2button')">2: Story Mission</button>
-                        <button id="otherEncounter3button" class="encounter" type="button" onclick="selectEncounter('otherEncounter3button')">3: Story Mission</button>
-                        <button id="otherEncounter4button" class="encounter" type="button" onclick="selectEncounter('otherEncounter4button')">4: Story Mission</button>
-                        <button id="otherEncounter5button" class="encounter" type="button" onclick="selectEncounter('otherEncounter5button')">5: Story Mission</button>
-                        <button id="otherEncounter6button" class="encounter" type="button" onclick="selectEncounter('otherEncounter6button')">6: Story Mission</button>
-                        <button id="otherEncounter7button" class="encounter" type="button" onclick="selectEncounter('otherEncounter7button')">7: Story Mission</button>
-                        <button id="otherEncounter8button" class="encounter" type="button" onclick="selectEncounter('otherEncounter8button')">8: Story Mission</button>
+                        <button id="encounter0button" class="encounter" type="button" onclick="selectEncounter('encounter0button')" style="display: none;">Chest 1</button>
+                        <button id="encounter1button" class="encounter" type="button" onclick="selectEncounter('encounter1button')" style="display: none;">1: Substratum</button>
+                        <button id="encounter1hbutton" class="encounter" type="button" onclick="selectEncounter('encounter1hbutton')" style="display: none;">Chest 1</button>
+                        <button id="encounter2button" class="encounter" type="button" onclick="selectEncounter('encounter2button')" style="display: none;">2: Dissipation</button>
+                        <button id="encounter2hbutton" class="encounter" type="button" onclick="selectEncounter('encounter2hbutton')" style="display: none;">Chest 1</button>
+                        <button id="encounter3button" class="encounter" type="button" onclick="selectEncounter('encounter3button')" style="display: none;">3: Repository</button>
+                        <button id="encounter3hbutton" class="encounter" type="button" onclick="selectEncounter('encounter3hbutton')" style="display: none;">Wall / Chest 4</button>
+                        <button id="encounter4button" class="encounter" type="button" onclick="selectEncounter('encounter4button')" style="display: none;">4: Verity</button>
+                        <button id="encounter4hbutton" class="encounter" type="button" onclick="selectEncounter('encounter4hbutton')" style="display: none;">Chest 2</button>
+                        <button id="encounter5button" class="encounter" type="button" onclick="selectEncounter('encounter5button')" style="display: none;">5: The Witness</button>
+                        <button id="otherEncounter1button" class="encounter" type="button" onclick="selectEncounter('otherEncounter1button')" style="display: none;">1: Transmigration</button>
+                        <button id="otherEncounter2button" class="encounter" type="button" onclick="selectEncounter('otherEncounter2button')" style="display: none;">2: Temptation</button>
+                        <button id="otherEncounter3button" class="encounter" type="button" onclick="selectEncounter('otherEncounter3button')" style="display: none;">3: Exegesis</button>
+                        <button id="otherEncounter4button" class="encounter" type="button" onclick="selectEncounter('otherEncounter4button')" style="display: none;">4: Requiem</button>
+                        <button id="otherEncounter5button" class="encounter" type="button" onclick="selectEncounter('otherEncounter5button')" style="display: none;">5: Ascent</button>
+                        <button id="otherEncounter6button" class="encounter" type="button" onclick="selectEncounter('otherEncounter6button')" style="display: none;">6: Dissent</button>
+                        <button id="otherEncounter7button" class="encounter" type="button" onclick="selectEncounter('otherEncounter7button')" style="display: none;">7: Iconoclasm</button>
+                        <button id="otherEncounter8button" class="encounter" type="button" onclick="selectEncounter('otherEncounter8button')" style="display: none;">8: Desperate Measures</button>
                     </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="flex-parent selectorButtons" id ="diffButtons">
+        <div class="flex-parent selectorButtons" id="diffButtons" style="display: flex;">
             <button id="difficultyNormalbutton" class="difficulty" type="button" onclick="selectDifficulty(false)">Normal</button>
             <button id="difficultyMasterbutton" class="difficulty" type="button" onclick="selectDifficulty(true)">Master</button>
         </div>
-        </div>
+        
 
         <div class="queueOptions">
             <div>
-                <p id="queueString">!queue</h2>
+                <p id="queueString" class="queueString">!queue</p>
             </div>
-            
             <button type="button" onclick="copyButton()">Copy to Clipboard</button>
         </div>
-    </div>
+
+        <footer>
+            <iframe
+                src="https://player.twitch.tv/?channel=travelerschosenteam&parent=travelerschosenteam.github.io&muted=true"
+                height="260"
+                width="470"
+                allowfullscreen>
+            </iframe>
+        </footer>
+    
 
     <script>
         var activitytype = 1;
@@ -563,7 +582,7 @@
             difficulty_found=true;
             document.getElementById("difficultyNormalbutton").disabled = true;
             document.getElementById("difficultyMasterbutton").disabled = true;
-            document.getElementById("diffButtons").style.display = "none";
+            document.getElementById("diffButtons").style.visibility = "hidden";
             updateQueueString()
         }
 
@@ -572,7 +591,7 @@
             difficulty_found=false;
             document.getElementById("difficultyNormalbutton").disabled = false;
             document.getElementById("difficultyMasterbutton").disabled = false;
-            document.getElementById("diffButtons").style.display = "flex";
+            document.getElementById("diffButtons").style.visibility = "visible";
             
         }
 
@@ -614,5 +633,6 @@
         }
     </script>
 
-</body>
-</html>
+
+
+</body></html>

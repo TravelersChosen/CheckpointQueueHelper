@@ -27,6 +27,10 @@
                 
                 width: 100%;
             }
+            div.embed
+            {
+                display: inline;
+            }
             button.activitytype
             {
                 width: 33%;
@@ -214,7 +218,9 @@
         </div>
 
         <footer>
-            <div id="embed1"></div>
+            <div id="embed1" class="embed"></div>
+            <div id="embed2" class="embed"></div>
+            <div id="embed3" class="embed"></div>
             <!-- <iframe
                 src="https://player.twitch.tv/?channel=luckbot9&parent=travelerschosenteam.github.io&muted=true"
                 height="260"
@@ -231,7 +237,7 @@
         const urlParams = new URLSearchParams(window.location.search);
         const runtest = urlParams.get('embed1');
         
-            var options = {
+            var options1 = {
             width: 470,
             height: 260,
             channel: "TravelersChosenTeam",
@@ -239,7 +245,27 @@
             layout: 'video',
             parent: ["travelerschosen.github.io", "github.io", "www.travelerschosen.github.io"]
             };
-            var player = new Twitch.Embed("embed1", options);
+            var player = new Twitch.Embed("embed1", options1);
+
+            var options2 = {
+            width: 470,
+            height: 260,
+            channel: "LuckBot9",
+            allowfullscreen: false,
+            layout: 'video',
+            parent: ["travelerschosen.github.io", "github.io", "www.travelerschosen.github.io"]
+            };
+            var player = new Twitch.Embed("embed2", options2);
+
+            var options3 = {
+            width: 470,
+            height: 260,
+            channel: "GuardianDownBot",
+            allowfullscreen: false,
+            layout: 'video',
+            parent: ["travelerschosen.github.io", "github.io", "www.travelerschosen.github.io"]
+            };
+            var player = new Twitch.Embed("embed3", options3);
     </script>
 
     <script>

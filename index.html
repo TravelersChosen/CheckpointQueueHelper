@@ -82,7 +82,7 @@
                 align-items: center;
                 font-size: 20pt;
             }
-            h1{
+            .title{
                 text-align: center;
                 color: white;
             }
@@ -133,14 +133,55 @@
                 justify-items: center;
             }
             .embed1{
+                grid-row-start: 2;
                 grid-column-start: 1;
+                margin-top: 2%;
                 
             }
             .embed2{
+                grid-row-start: 2;
                 grid-column-start: 2;
+                margin-top: 2%;
             }
-            .embed2{
+            .embed3{
+                grid-row-start: 2;
                 grid-column-start: 3;
+                margin-top: 2%;
+            }
+            .TCT{
+                grid-row-start: 1;
+                grid-column-start: 1;
+            }
+            .LB9{
+                grid-row-start: 1;
+                grid-column-start: 2;
+
+            }
+            .GDB{
+                grid-row-start: 1;
+                grid-column-start: 3;
+            }
+            .bots{
+                color: antiquewhite;
+                font-size: 28px;
+                background-color: rgba(3, 3, 3, 0.68);
+                cursor: pointer; 
+                border-radius: 12px;
+                
+            }
+            .help{
+                
+                background-color: rgba(3, 3, 3, 0.68);
+                cursor: pointer; 
+                border-radius: 12px;
+                float:right;
+                color: white;
+                margin-left: 5px;
+            }
+            img{
+                width: 30px;
+                height: 30px;
+                
             }
 
 
@@ -149,8 +190,12 @@
     </head>
 <body>
     <div>
-        <h1>Twitch Checkpoint Bot Queue Helper</h1>
-        <p class="bungie-name">Bungie Name: <input type="text" id="bungiename" onkeyup="bungienamevalidator()" placeholder="bungiename#0000"></p>
+        <h1 class = "title">Twitch Checkpoint Bot Queue Helper 
+        
+        </h1>
+        <p class="bungie-name">Bungie Name: <input type="text" id="bungiename" onkeyup="bungienamevalidator()" placeholder="bungiename#0000">
+            <a class = "help" href="https://discord.gg/kbBbxaeAAy" ><img src ="https://cdn-icons-png.flaticon.com/512/4945/4945973.png" ></img></a>
+        </p>
         <div class="flex-parent selectorButtons">
             <button id="raidsSelect" class="activitytype" type="button" onclick="selectRaids()">Raids</button>
             <button id="dungeonsSelect" class="activitytype" type="button" onclick="selectDungeons()">Dungeons</button>
@@ -235,6 +280,9 @@
         </div>
 
         <footer>
+            <a class = "bots" id ="TCT" href="https://www.twitch.tv/travelerschosenteam"> Travelers Chosen Team </a>
+            <a class = "bots" id ="LB9" href="https://www.twitch.tv/luckbot9"> Luckbot9 </a>
+            <a class = "bots" id ="GDB" href="https://www.twitch.tv/guardiandownbot"> Guardian Down Bot </a>
             <div id="embed1" class="embed"></div>
             <div id="embed2" class="embed"></div>
             <div id="embed3" class="embed"></div>

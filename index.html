@@ -130,7 +130,7 @@
                 color: aliceblue;
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
-                justify-items: center;
+                justify-items: left;
             }
             .embed1{
                 grid-row-start: 2;
@@ -162,11 +162,14 @@
                 grid-column-start: 3;
             }
             .bots{
+                text-align: center;
+                width: 100%;
                 color: antiquewhite;
                 font-size: 28px;
                 background-color: rgba(3, 3, 3, 0.68);
                 cursor: pointer; 
                 border-radius: 12px;
+                align-content: center;
                 
             }
             .help{
@@ -181,7 +184,6 @@
             img{
                 width: 30px;
                 height: 30px;
-                
             }
 
 
@@ -303,8 +305,8 @@
         const runtest = urlParams.get('embed1');
         
             var options1 = {
-            width: 470,
-            height: 260,
+            width: "33%",
+            height: "100%",
             channel: "TravelersChosenTeam",
             allowfullscreen: false,
             layout: 'video',
@@ -313,8 +315,8 @@
             var player = new Twitch.Embed("embed1", options1);
 
             var options2 = {
-            width: 470,
-            height: 260,
+            width: "205%",
+            height: "200%",
             channel: "LuckBot9",
             allowfullscreen: false,
             layout: 'video',
@@ -323,8 +325,8 @@
             var player = new Twitch.Embed("embed2", options2);
 
             var options3 = {
-            width: 470,
-            height: 260,
+            width: "205%",
+            height: "200%",
             channel: "GuardianDownBot",
             allowfullscreen: false,
             layout: 'video',

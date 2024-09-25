@@ -237,6 +237,7 @@
                         <p class="typeText">Other Activites:</p>
                         <button class="activity" type="button" onclick="selectActivity('The Final Shape')">The Final Shape</button>
                         <button class="activity" type="button" onclick="selectActivity('Lightfall')">Lightfall</button>
+                        <button class="activity" type="button" onclick="selectActivity('Witch Queen')">Witch Queen</button>
                         <button class="activity" type="button" onclick="selectActivity('Shared Wisdom')">Shared Wisdom</button>
                     </div>    
                 </div>
@@ -662,6 +663,19 @@
                 showButton("otherEncounter6button", "6: No Time Left")
                 showButton("otherEncounter7button", "7: Headlong")
                 showButton("otherEncounter8button", "8: Desperate Measures")
+            }
+            if (activityname=="Witch Queen")
+            {
+                enableDifficultybuttons();
+                activity="wq"
+                showButton("otherEncounter1button", "1: The Arrival")
+                showButton("otherEncounter2button", "2: The Investigation")
+                showButton("otherEncounter3button", "3: The Ghosts")
+                showButton("otherEncounter4button", "4: The Communion")
+                showButton("otherEncounter5button", "5: The Mirror")
+                showButton("otherEncounter6button", "6: The Cunning")
+                showButton("otherEncounter7button", "7: The Last Chance")
+                showButton("otherEncounter8button", "8: The Ritual")
             }
             if (activityname=="Shared Wisdom")
             {

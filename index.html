@@ -17,7 +17,6 @@
 
             div.column50
             {
-                
                 width: 100%;
             }
 
@@ -136,7 +135,7 @@
                 grid-row-start: 2;
                 grid-column-start: 1;
                 margin-top: 2%;
-                text-align:left;
+                margin-right: 0%;
                 float:left;
                 
             }
@@ -144,14 +143,15 @@
                 grid-row-start: 2;
                 grid-column-start: 2;
                 margin-top: 2%;
-                text-align:center;
+                float:center;
             }
             .embed3{
                 grid-row-start: 2;
                 grid-column-start: 3;
                 margin-top: 2%;
+                margin-right: 0%;
+                margin-left: 5%;
                 float:right;
-                text-align:right;
             }
             .TCT{
                 grid-row-start: 1;
@@ -286,18 +286,25 @@
             </div>
             <button type="button" onclick="copyButton()">Copy to Clipboard</button>
         </div>
+        <div class="flex-parent bots">
+        <a class = "bots" id ="TCT" href="https://www.twitch.tv/travelerschosenteam"> Travelers Chosen Team </a>
+        <a class = "bots" id ="LB9" href="https://www.twitch.tv/luckbot9"> Luckbot9 </a>
+        <a class = "bots" id ="GDB" href="https://www.twitch.tv/guardiandownbot"> Guardian Down Bot </a>
+        </div>
+    
 
         <div id="embed1" class="embed"></div>
         <div id="embed2" class="embed"></div>
-        <div id="embed3" class="embed"></div> 
-        <footer>
+        <div id="embed3" class="embed"></div>
+    
+        <!-- <footer>
             <a class = "bots" id ="TCT" href="https://www.twitch.tv/travelerschosenteam"> Travelers Chosen Team </a>
             <a class = "bots" id ="LB9" href="https://www.twitch.tv/luckbot9"> Luckbot9 </a>
             <a class = "bots" id ="GDB" href="https://www.twitch.tv/guardiandownbot"> Guardian Down Bot </a>
             <div id="embed1" class="embed"></div>
             <div id="embed2" class="embed"></div>
             <div id="embed3" class="embed"></div> 
-            <!-- <iframe
+             <iframe
                 src="https://player.twitch.tv/?channel=luckbot9&parent=travelerschosenteam.github.io&muted=true"
                 height="260"
                 width="470"
@@ -305,14 +312,12 @@
             </iframe>
 
             <iframe src="https://embed.twitch.tv?allowfullscreen=false&channel=travelerschosenteam&height=260layout=video&parent=travelerschosenteam.github.io&width=470" allowfullscreen="" scrolling="no" frameborder="0" allow="autoplay; fullscreen" title="Twitch" sandbox="allow-modals allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" width="470" height="260"></iframe>
-         -->
             
-        </footer>
+        </footer> -->
     
     <script type="text/javascript">
         const urlParams = new URLSearchParams(window.location.search);
         const runtest = urlParams.get('embed1');
-        
             var options1 = {
             width: "33%",
             height: "100%",

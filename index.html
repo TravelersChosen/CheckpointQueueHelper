@@ -136,17 +136,22 @@
                 grid-row-start: 2;
                 grid-column-start: 1;
                 margin-top: 2%;
+                text-align:left;
+                float:left;
                 
             }
             .embed2{
                 grid-row-start: 2;
                 grid-column-start: 2;
                 margin-top: 2%;
+                text-align:center;
             }
             .embed3{
                 grid-row-start: 2;
                 grid-column-start: 3;
                 margin-top: 2%;
+                float:right;
+                text-align:right;
             }
             .TCT{
                 grid-row-start: 1;
@@ -282,13 +287,14 @@
             <button type="button" onclick="copyButton()">Copy to Clipboard</button>
         </div>
 
+        <iframe class="videoplayer" src="https://www.twitch.tv/travelerschosenteam" height="100%" width="100%" frameborder="0" scrolling="no"></iframe>
         <footer>
             <a class = "bots" id ="TCT" href="https://www.twitch.tv/travelerschosenteam"> Travelers Chosen Team </a>
             <a class = "bots" id ="LB9" href="https://www.twitch.tv/luckbot9"> Luckbot9 </a>
             <a class = "bots" id ="GDB" href="https://www.twitch.tv/guardiandownbot"> Guardian Down Bot </a>
             <div id="embed1" class="embed"></div>
-            <div id="embed2" class="embed"></div>
-            <div id="embed3" class="embed"></div>
+            <!-- <div id="embed2" class="embed"></div>
+            <div id="embed3" class="embed"></div>--> 
             <!-- <iframe
                 src="https://player.twitch.tv/?channel=luckbot9&parent=travelerschosenteam.github.io&muted=true"
                 height="260"
@@ -306,8 +312,8 @@
         const runtest = urlParams.get('embed1');
         
             var options1 = {
-            width: 470,
-            height: 260,
+            width: "100%",
+            height: "100%",
             channel: "TravelersChosenTeam",
             allowfullscreen: false,
             layout: 'video',
@@ -316,8 +322,8 @@
             var player = new Twitch.Embed("embed1", options1);
 
             var options2 = {
-            width: 470,
-            height: 260,
+            width: "100%",
+            height: "100%",
             channel: "LuckBot9",
             allowfullscreen: false,
             layout: 'video',
@@ -326,8 +332,8 @@
             var player = new Twitch.Embed("embed2", options2);
 
             var options3 = {
-            width: 470,
-            height: 260,
+            width: "100%",
+            height: "100%",
             channel: "GuardianDownBot",
             allowfullscreen: false,
             layout: 'video',

@@ -135,7 +135,6 @@
                 grid-row-start: 2;
                 grid-column-start: 1;
                 margin-top: 2%;
-                margin-right: 0%;
                 float:left;
                 
             }
@@ -149,8 +148,6 @@
                 grid-row-start: 2;
                 grid-column-start: 3;
                 margin-top: 2%;
-                margin-right: 0%;
-                margin-left: 5%;
                 float:right;
             }
             .TCT{
@@ -324,19 +321,27 @@
     <script type="text/javascript">
         const urlParams = new URLSearchParams(window.location.search);
         const runtest = urlParams.get('embed1');
+
+        //var h = window.innerHeight/2.7;
+        var h = window.innerHeight*.27
+        var w = window.innerWidth
+        console.log(window.innerHeight)
+        console.log(window.innerWidth)
+        console.log(h)
             var options1 = {
             width: "33%",
-            height: 480,
+            height: h,
             channel: "TravelersChosenTeam",
             allowfullscreen: false,
             layout: 'video',
             parent: ["travelerschosen.github.io", "github.io", "www.travelerschosen.github.io"]
             };
+            console.log(options1.height)
             var player = new Twitch.Embed("embed1", options1);
 
             var options2 = {
             width: "33%",
-            height: 480,
+            height: h,
             channel: "LuckBot9",
             allowfullscreen: false,
             layout: 'video',
@@ -346,7 +351,7 @@
 
             var options3 = {
             width: "33%",
-            height: 480,
+            height: h,
             channel: "GuardianDownBot",
             allowfullscreen: false,
             layout: 'video',
@@ -368,7 +373,7 @@
         var bungiename_found = false;
 
         var queueString = "";
-
+        window.onresize = function(){ location.reload(); }
         function isDigit(str) 
         {
             return /^\d+$/.test(str);

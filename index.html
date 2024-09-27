@@ -167,15 +167,21 @@
                 grid-column-start: 3;
             }
             .bots{
+                
                 text-align: center;
                 width: 100%;
+                height: 400%;
                 color: antiquewhite;
                 font-size: 28px;
                 background-color: rgba(3, 3, 3, 0.68);
                 cursor: pointer; 
                 border-radius: 12px;
                 align-content: center;
+                margin-bottom: .5%;
                 
+            }
+            .botsdiv{
+                margin-top: 10%;
             }
             .help{
                 
@@ -286,7 +292,7 @@
             </div>
             <button type="button" onclick="copyButton()">Copy to Clipboard</button>
         </div>
-        <div class="flex-parent bots">
+        <div class="flex-parent botsdiv">
         <a class = "bots" id ="TCT" href="https://www.twitch.tv/travelerschosenteam"> Travelers Chosen Team </a>
         <a class = "bots" id ="LB9" href="https://www.twitch.tv/luckbot9"> Luckbot9 </a>
         <a class = "bots" id ="GDB" href="https://www.twitch.tv/guardiandownbot"> Guardian Down Bot </a>
@@ -320,7 +326,7 @@
         const runtest = urlParams.get('embed1');
             var options1 = {
             width: "33%",
-            height: "100%",
+            height: "400%",
             channel: "TravelersChosenTeam",
             allowfullscreen: false,
             layout: 'video',
@@ -330,7 +336,7 @@
 
             var options2 = {
             width: "33%",
-            height: "100%",
+            height: "400%",
             channel: "LuckBot9",
             allowfullscreen: false,
             layout: 'video',
@@ -340,7 +346,7 @@
 
             var options3 = {
             width: "33%",
-            height: "100%",
+            height: "400%",
             channel: "GuardianDownBot",
             allowfullscreen: false,
             layout: 'video',

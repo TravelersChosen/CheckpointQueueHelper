@@ -287,7 +287,6 @@
             <button type="button" onclick="copyButton()">Copy to Clipboard</button>
         </div>
 
-        <iframe class="videoplayer" src="https://www.twitch.tv/travelerschosenteam" height="100%" width="100%" frameborder="0" scrolling="no"></iframe>
         <div id="embed1" class="embed"></div>
         <div id="embed2" class="embed"></div>
         <div id="embed3" class="embed"></div> 
@@ -315,7 +314,7 @@
         const runtest = urlParams.get('embed1');
         
             var options1 = {
-            width: "100%",
+            width: "33%",
             height: "100%",
             channel: "TravelersChosenTeam",
             allowfullscreen: false,
@@ -325,7 +324,7 @@
             var player = new Twitch.Embed("embed1", options1);
 
             var options2 = {
-            width: "100%",
+            width: "33%",
             height: "100%",
             channel: "LuckBot9",
             allowfullscreen: false,
@@ -335,7 +334,7 @@
             var player = new Twitch.Embed("embed2", options2);
 
             var options3 = {
-            width: "100%",
+            width: "33%",
             height: "100%",
             channel: "GuardianDownBot",
             allowfullscreen: false,

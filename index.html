@@ -9,7 +9,6 @@
             }
             div.column33
             {
-                
                 width: 100%;
             }
 
@@ -236,6 +235,7 @@
                         <button class="activity" type="button" onclick="selectActivity('Prophecy')">Prophecy</button>
                         <button class="activity" type="button" onclick="selectActivity('Pit of Heresy')">Pit of Heresy</button>
                         <button class="activity" type="button" onclick="selectActivity('Shattered Throne')">Shattered Throne</button>
+                        <button class="activity" type="button" onclick="selectActivity('Vesper\'s Host')">Vesper's Host</button>
                     </div>
                 </div>
                 <div id="otherActivityContainer" class="column33" style="display: none;">
@@ -661,6 +661,16 @@
                 showButton("encounter2button", "2");
                 showButton("encounter3button", "3: Simmumah / Final Boss");
             }
+            if (activityname=="Vesper's Host")
+            {
+                enableDifficultybuttons()
+                activity="vh";
+                showButton("encounter1button", "1");
+                showButton("encounter2button", "Chest1");
+                showButton("encounter3button", "2");
+                showButton("encounter4button", "Chest2");
+                showButton("encounter5button", "3: Final Boss");
+            }
             if (activityname=="The Final Shape")
             {
                 enableDifficultybuttons();
@@ -703,7 +713,8 @@
             {
                 disableDifficultybuttons();
                 activity="sw"
-                showButton("otherEncounter1button", "1: The Helm")
+                encounter = 1
+                //showButton("otherEncounter1button", "1: The Last City")
             }
             updateQueueString();
             return;

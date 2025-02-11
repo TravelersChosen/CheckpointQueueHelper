@@ -1,19 +1,23 @@
 <!DOCTYPE html>
-<!-- saved from url=(0056)https://travelerschosen.github.io/CheckpointQueueHelper/ -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html>
+    <head>
         <style>
             body{
+                
+
                 background-image: url(https://drive.google.com/thumbnail?authuser=0&sz=w1500&id=1ZPVU1KYPWhEBInb2f_wiTxChUlaDbjBc);
                 background-size:cover;
                 background-repeat: no-repeat;
             }
             div.column33
             {
+                
                 width: 100%;
             }
 
             div.column50
             {
+                
                 width: 100%;
             }
 
@@ -22,10 +26,6 @@
                 display: left;
                 
                 width: 100%;
-            }
-            div.embed
-            {
-                display: inline;
             }
             button.activitytype
             {
@@ -37,8 +37,6 @@
                 align-items: center;
                 border-radius: 12px;
                 cursor: pointer;
-                height: 30px;
-                font-size: 25px;
             }
 
             button.activity
@@ -74,11 +72,8 @@
                 justify-content: center;
                 border-radius: 12px;
                 cursor: pointer;
-                height: 50px;
-                align-items: center;
-                font-size: 20pt;
             }
-            .title{
+            h1{
                 text-align: center;
                 color: white;
             }
@@ -110,107 +105,27 @@
             .typeText{
                 color: white;
                 text-align: center;
-                font-size: 20px;
             }
             .queueOptions{
                 color: aliceblue;
                 text-align: center;
             }
 
-            .queueString{
-                color: yellow;
-                font-size: 40px;
-            }
-            footer{
-                margin-top: 2%;
-                color: aliceblue;
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-                justify-items: left;
-            }
-            .embed1{
-                grid-row-start: 2;
-                grid-column-start: 1;
-                margin-top: 2%;
-                float:left;
-                
-            }
-            .embed2{
-                grid-row-start: 2;
-                grid-column-start: 2;
-                margin-top: 2%;
-                float:center;
-            }
-            .embed3{
-                grid-row-start: 2;
-                grid-column-start: 3;
-                margin-top: 2%;
-                float:right;
-            }
-            .TCT{
-                grid-row-start: 1;
-                grid-column-start: 1;
-            }
-            .LB9{
-                grid-row-start: 1;
-                grid-column-start: 2;
-
-            }
-            .GDB{
-                grid-row-start: 1;
-                grid-column-start: 3;
-            }
-            .bots{
-                
-                text-align: center;
-                width: 100%;
-                height: 400%;
-                color: antiquewhite;
-                font-size: 28px;
-                background-color: rgba(3, 3, 3, 0.68);
-                cursor: pointer; 
-                border-radius: 12px;
-                align-content: center;
-                margin-bottom: .5%;
-                
-            }
-            .botsdiv{
-                margin-top: 5%;
-            }
-            .help{
-                
-                background-color: rgba(3, 3, 3, 0.68);
-                cursor: pointer; 
-                border-radius: 12px;
-                float:right;
-                color: white;
-                margin-left: 5px;
-            }
-            img{
-                width: 30px;
-                height: 30px;
-            }
-
 
         </style>
-        <script src= "https://embed.twitch.tv/embed/v1.js"></script>
     </head>
 <body>
     <div>
-        <h1 class = "title">Twitch Checkpoint Bot Queue Helper 
-        
-        </h1>
-        <p class="bungie-name">Bungie Name: <input type="text" id="bungiename" onkeyup="bungienamevalidator()" placeholder="bungiename#0000">
-            <a class = "help" href="https://discord.gg/kbBbxaeAAy" ><img src ="https://cdn-icons-png.flaticon.com/512/4945/4945973.png" ></img></a>
-        </p>
-        <div class="flex-parent selectorButtons">
+        <h1>Twitch Checkpoint Bot Queue Helper</h1>
+        <p class = "bungie-name">Bungie Name: <input type="text" id="bungiename" onkeyup="bungienamevalidator()"placeholder="bungiename#0000"></p>
+        <div class = "flex-parent selectorButtons">
             <button id="raidsSelect" class="activitytype" type="button" onclick="selectRaids()">Raids</button>
             <button id="dungeonsSelect" class="activitytype" type="button" onclick="selectDungeons()">Dungeons</button>
             <button id="storySelect" class="activitytype" type="button" onclick="selectOtherActivity()">Stories/Other</button>
         </div>
-        <div class="mainButtons">
-            <div class="actContainer">
-                <div id="raidsContainer" class="column33" style="display: block;">
+        <div class = "mainButtons">
+            <div class = "actContainer">
+                <div id="raidsContainer" class="column33">
                     <div id="raidsButtonContainer" class="column50">
                         <p class="typeText">Raid:</p>
                         <button class="activity" type="button" onclick="selectActivity('Salvation\'s Edge')">Salvation's Edge</button>
@@ -224,7 +139,7 @@
                         <button class="activity" type="button" onclick="selectActivity('Last Wish')">Last Wish</button>
                     </div>
                 </div>
-                <div id="dungeonsContainer" class="column33" style="display: none;">
+                <div id="dungeonsContainer" class="column33" style="display:none;">
                     <div id="dungeonsButtonContainer" class="column50">
                         <p class="typeText">Dungeon:</p>
                         <button class="activity" type="button" onclick="selectActivity('Warlord\'s Ruin')">Warlord's Ruin</button>
@@ -235,7 +150,7 @@
                         <button class="activity" type="button" onclick="selectActivity('Prophecy')">Prophecy</button>
                         <button class="activity" type="button" onclick="selectActivity('Pit of Heresy')">Pit of Heresy</button>
                         <button class="activity" type="button" onclick="selectActivity('Shattered Throne')">Shattered Throne</button>
-                        <button class="activity" type="button" onclick="selectActivity('Vesper\'s Host')">Vesper's Host</button>
+                        <button class="activity" type="button" onclick="selectActivity('Sundered Doctrine')">Sundered Doctrine</button>
                     </div>
                 </div>
                 <div id="otherActivityContainer" class="column33" style="display: none;">
@@ -243,120 +158,51 @@
                         <p class="typeText">Other Activites:</p>
                         <button class="activity" type="button" onclick="selectActivity('The Final Shape')">The Final Shape</button>
                         <button class="activity" type="button" onclick="selectActivity('Lightfall')">Lightfall</button>
-                        <button class="activity" type="button" onclick="selectActivity('Witch Queen')">Witch Queen</button>
                         <button class="activity" type="button" onclick="selectActivity('Shared Wisdom')">Shared Wisdom</button>
                     </div>    
                 </div>
             </div>
-            <div class="encContainer">
+            <div class = "encContainer">
                 <div id="encounterContainer" class="column33">
                     <div class="column50">
                         <p class="typeText" id="encountertext">Encounter:</p>
-                        <button id="encounter0button" class="encounter" type="button" onclick="selectEncounter('encounter0button')" style="display: none;">Chest 1</button>
-                        <button id="encounter1button" class="encounter" type="button" onclick="selectEncounter('encounter1button')" style="display: none;">1: Substratum</button>
-                        <button id="encounter1hbutton" class="encounter" type="button" onclick="selectEncounter('encounter1hbutton')" style="display: none;">Chest 1</button>
-                        <button id="encounter2button" class="encounter" type="button" onclick="selectEncounter('encounter2button')" style="display: none;">2: Dissipation</button>
-                        <button id="encounter2hbutton" class="encounter" type="button" onclick="selectEncounter('encounter2hbutton')" style="display: none;">Chest 1</button>
-                        <button id="encounter3button" class="encounter" type="button" onclick="selectEncounter('encounter3button')" style="display: none;">3: Repository</button>
-                        <button id="encounter3hbutton" class="encounter" type="button" onclick="selectEncounter('encounter3hbutton')" style="display: none;">Wall / Chest 4</button>
-                        <button id="encounter4button" class="encounter" type="button" onclick="selectEncounter('encounter4button')" style="display: none;">4: Verity</button>
-                        <button id="encounter4hbutton" class="encounter" type="button" onclick="selectEncounter('encounter4hbutton')" style="display: none;">Chest 2</button>
-                        <button id="encounter5button" class="encounter" type="button" onclick="selectEncounter('encounter5button')" style="display: none;">5: The Witness</button>
-                        <button id="otherEncounter1button" class="encounter" type="button" onclick="selectEncounter('otherEncounter1button')" style="display: none;">1: Transmigration</button>
-                        <button id="otherEncounter2button" class="encounter" type="button" onclick="selectEncounter('otherEncounter2button')" style="display: none;">2: Temptation</button>
-                        <button id="otherEncounter3button" class="encounter" type="button" onclick="selectEncounter('otherEncounter3button')" style="display: none;">3: Exegesis</button>
-                        <button id="otherEncounter4button" class="encounter" type="button" onclick="selectEncounter('otherEncounter4button')" style="display: none;">4: Requiem</button>
-                        <button id="otherEncounter5button" class="encounter" type="button" onclick="selectEncounter('otherEncounter5button')" style="display: none;">5: Ascent</button>
-                        <button id="otherEncounter6button" class="encounter" type="button" onclick="selectEncounter('otherEncounter6button')" style="display: none;">6: Dissent</button>
-                        <button id="otherEncounter7button" class="encounter" type="button" onclick="selectEncounter('otherEncounter7button')" style="display: none;">7: Iconoclasm</button>
-                        <button id="otherEncounter8button" class="encounter" type="button" onclick="selectEncounter('otherEncounter8button')" style="display: none;">8: Desperate Measures</button>
+                        <button id=encounter0button class="encounter" type="button" onclick="selectEncounter('encounter0button')">Encounter 0</button>
+                        <button id=encounter1button class="encounter" type="button" onclick="selectEncounter('encounter1button')">Encounter 1</button>
+                        <button id=encounter1hbutton class="encounter" type="button" onclick="selectEncounter('encounter1hbutton')">Encounter 1.5</button>
+                        <button id=encounter2button class="encounter" type="button" onclick="selectEncounter('encounter2button')">Encounter 2</button>
+                        <button id=encounter2hbutton class="encounter" type="button" onclick="selectEncounter('encounter2hbutton')">Encounter 2.5</button>
+                        <button id=encounter3button class="encounter" type="button" onclick="selectEncounter('encounter3button')">Encounter 3</button>
+                        <button id=encounter3hbutton class="encounter" type="button" onclick="selectEncounter('encounter3hbutton')">Encounter 3.5</button>
+                        <button id=encounter4button class="encounter" type="button" onclick="selectEncounter('encounter4button')">Encounter 4</button>
+                        <button id=encounter4hbutton class="encounter" type="button" onclick="selectEncounter('encounter4hbutton')">Encounter 4.5</button>
+                        <button id=encounter5button class="encounter" type="button" onclick="selectEncounter('encounter5button')">Encounter 5</button>
+                        <button id="otherEncounter1button" class="encounter" type="button" onclick="selectEncounter('otherEncounter1button')">1: Story Mission</button>
+                        <button id="otherEncounter2button" class="encounter" type="button" onclick="selectEncounter('otherEncounter2button')">2: Story Mission</button>
+                        <button id="otherEncounter3button" class="encounter" type="button" onclick="selectEncounter('otherEncounter3button')">3: Story Mission</button>
+                        <button id="otherEncounter4button" class="encounter" type="button" onclick="selectEncounter('otherEncounter4button')">4: Story Mission</button>
+                        <button id="otherEncounter5button" class="encounter" type="button" onclick="selectEncounter('otherEncounter5button')">5: Story Mission</button>
+                        <button id="otherEncounter6button" class="encounter" type="button" onclick="selectEncounter('otherEncounter6button')">6: Story Mission</button>
+                        <button id="otherEncounter7button" class="encounter" type="button" onclick="selectEncounter('otherEncounter7button')">7: Story Mission</button>
+                        <button id="otherEncounter8button" class="encounter" type="button" onclick="selectEncounter('otherEncounter8button')">8: Story Mission</button>
                     </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="flex-parent selectorButtons" id="diffButtons" style="display: flex;">
+        <div class="flex-parent selectorButtons" id ="diffButtons">
             <button id="difficultyNormalbutton" class="difficulty" type="button" onclick="selectDifficulty(false)">Normal</button>
             <button id="difficultyMasterbutton" class="difficulty" type="button" onclick="selectDifficulty(true)">Master</button>
         </div>
-        
+        </div>
 
         <div class="queueOptions">
             <div>
-                <p id="queueString" class="queueString">!queue</p>
+                <p id="queueString">!queue</h2>
             </div>
+            
             <button type="button" onclick="copyButton()">Copy to Clipboard</button>
         </div>
-        <div class="flex-parent botsdiv">
-        <a class = "bots" id ="TCT" href="https://www.twitch.tv/travelerschosenteam"> Travelers Chosen Team </a>
-        <a class = "bots" id ="LB9" href="https://www.twitch.tv/luckbot9"> Luckbot9 </a>
-        <a class = "bots" id ="GDB" href="https://www.twitch.tv/guardiandownbot"> Guardian Down Bot </a>
-        </div>
-    
-
-        <div id="embed1" class="embed"></div>
-        <div id="embed2" class="embed"></div>
-        <div id="embed3" class="embed"></div>
-    
-        <!-- <footer>
-            <a class = "bots" id ="TCT" href="https://www.twitch.tv/travelerschosenteam"> Travelers Chosen Team </a>
-            <a class = "bots" id ="LB9" href="https://www.twitch.tv/luckbot9"> Luckbot9 </a>
-            <a class = "bots" id ="GDB" href="https://www.twitch.tv/guardiandownbot"> Guardian Down Bot </a>
-            <div id="embed1" class="embed"></div>
-            <div id="embed2" class="embed"></div>
-            <div id="embed3" class="embed"></div> 
-             <iframe
-                src="https://player.twitch.tv/?channel=luckbot9&parent=travelerschosenteam.github.io&muted=true"
-                height="260"
-                width="470"
-                allowfullscreen>
-            </iframe>
-
-            <iframe src="https://embed.twitch.tv?allowfullscreen=false&channel=travelerschosenteam&height=260layout=video&parent=travelerschosenteam.github.io&width=470" allowfullscreen="" scrolling="no" frameborder="0" allow="autoplay; fullscreen" title="Twitch" sandbox="allow-modals allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" width="470" height="260"></iframe>
-            
-        </footer> -->
-    
-    <script type="text/javascript">
-        const urlParams = new URLSearchParams(window.location.search);
-        const runtest = urlParams.get('embed1');
-
-        //var h = window.innerHeight/2.7;
-        var h = window.innerHeight*.27
-        var w = window.innerWidth
-        console.log(window.innerHeight)
-        console.log(window.innerWidth)
-        console.log(h)
-            var options1 = {
-            width: "33%",
-            height: h,
-            channel: "TravelersChosenTeam",
-            allowfullscreen: false,
-            layout: 'video',
-            parent: ["travelerschosen.github.io", "github.io", "www.travelerschosen.github.io"]
-            };
-            console.log(options1.height)
-            var player = new Twitch.Embed("embed1", options1);
-
-            var options2 = {
-            width: "33%",
-            height: h,
-            channel: "LuckBot9",
-            allowfullscreen: false,
-            layout: 'video',
-            parent: ["travelerschosen.github.io", "github.io", "www.travelerschosen.github.io"]
-            };
-            var player = new Twitch.Embed("embed2", options2);
-
-            var options3 = {
-            width: "33%",
-            height: h,
-            channel: "GuardianDownBot",
-            allowfullscreen: false,
-            layout: 'video',
-            parent: ["travelerschosen.github.io", "github.io", "www.travelerschosen.github.io"]
-            };
-            var player = new Twitch.Embed("embed3", options3);
-    </script>
+    </div>
 
     <script>
         var activitytype = 1;
@@ -371,7 +217,7 @@
         var bungiename_found = false;
 
         var queueString = "";
-        window.onresize = function(){ location.reload(); }
+
         function isDigit(str) 
         {
             return /^\d+$/.test(str);
@@ -659,18 +505,20 @@
                 activity="st";
                 showButton("encounter1button", "1");
                 showButton("encounter2button", "2");
-                showButton("encounter3button", "3: Dul Incaru / Final Boss");
+                showButton("encounter3button", "3: Simmumah / Final Boss");
             }
-            if (activityname=="Vesper's Host")
+
+            if (activityname=="Sundered Doctrine")
             {
                 enableDifficultybuttons()
-                activity="vh";
-                showButton("encounter1button", "1");
+                activity="se";
+                showButton("encounter1button", "1: Flooded Inspection");
                 showButton("encounter2button", "Chest1");
-                showButton("encounter3button", "2");
-                showButton("encounter4button", "Chest2");
-                showButton("encounter5button", "3: Final Boss");
+                showButton("encounter2hbutton", "2: Zoetic Lockset");
+                showButton("encounter3button", "Chest 2");
+                showButton("encounter4button", "3: Kerrev, The Erased");
             }
+
             if (activityname=="The Final Shape")
             {
                 enableDifficultybuttons();
@@ -696,25 +544,11 @@
                 showButton("otherEncounter7button", "7: Headlong")
                 showButton("otherEncounter8button", "8: Desperate Measures")
             }
-            if (activityname=="Witch Queen")
-            {
-                enableDifficultybuttons();
-                activity="wq"
-                showButton("otherEncounter1button", "1: The Arrival")
-                showButton("otherEncounter2button", "2: The Investigation")
-                showButton("otherEncounter3button", "3: The Ghosts")
-                showButton("otherEncounter4button", "4: The Communion")
-                showButton("otherEncounter5button", "5: The Mirror")
-                showButton("otherEncounter6button", "6: The Cunning")
-                showButton("otherEncounter7button", "7: The Last Chance")
-                showButton("otherEncounter8button", "8: The Ritual")
-            }
             if (activityname=="Shared Wisdom")
             {
                 disableDifficultybuttons();
                 activity="sw"
-                encounter = 1
-                //showButton("otherEncounter1button", "1: The Last City")
+                showButton("otherEncounter1button", "1: The Helm")
             }
             updateQueueString();
             return;
@@ -742,7 +576,7 @@
             difficulty_found=true;
             document.getElementById("difficultyNormalbutton").disabled = true;
             document.getElementById("difficultyMasterbutton").disabled = true;
-            document.getElementById("diffButtons").style.visibility = "hidden";
+            document.getElementById("diffButtons").style.display = "none";
             updateQueueString()
         }
 
@@ -751,7 +585,7 @@
             difficulty_found=false;
             document.getElementById("difficultyNormalbutton").disabled = false;
             document.getElementById("difficultyMasterbutton").disabled = false;
-            document.getElementById("diffButtons").style.visibility = "visible";
+            document.getElementById("diffButtons").style.display = "flex";
             
         }
 
@@ -793,6 +627,5 @@
         }
     </script>
 
-
-
-</body></html>
+</body>
+</html>

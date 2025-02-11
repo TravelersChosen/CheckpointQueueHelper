@@ -150,6 +150,7 @@
                         <button class="activity" type="button" onclick="selectActivity('Prophecy')">Prophecy</button>
                         <button class="activity" type="button" onclick="selectActivity('Pit of Heresy')">Pit of Heresy</button>
                         <button class="activity" type="button" onclick="selectActivity('Shattered Throne')">Shattered Throne</button>
+                        <button class="activity" type="button" onclick="selectActivity('Vesper\'s Host')">Vesper's Host</button>
                         <button class="activity" type="button" onclick="selectActivity('Sundered Doctrine')">Sundered Doctrine</button>
                     </div>
                 </div>
@@ -507,7 +508,15 @@
                 showButton("encounter2button", "2");
                 showButton("encounter3button", "3: Simmumah / Final Boss");
             }
-
+            if (activityname=="Vesper's Host")
+            {
+                enableDifficultybuttons()
+                activity="vh";
+                showButton("encounter1button", "1");
+                showButton("encounter2button", "Chest1");
+                showButton("encounter3button", "2");
+                showButton("encounter4button", "Chest2");
+            }
             if (activityname=="Sundered Doctrine")
             {
                 enableDifficultybuttons()

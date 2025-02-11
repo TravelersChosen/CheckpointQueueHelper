@@ -150,6 +150,7 @@
                         <button class="activity" type="button" onclick="selectActivity('Prophecy')">Prophecy</button>
                         <button class="activity" type="button" onclick="selectActivity('Pit of Heresy')">Pit of Heresy</button>
                         <button class="activity" type="button" onclick="selectActivity('Shattered Throne')">Shattered Throne</button>
+                        <button class="activity" type="button" onclick="selectActivity('Sundered Doctrine')">Sundered Doctrine</button>
                     </div>
                 </div>
                 <div id="otherActivityContainer" class="column33" style="display: none;">
@@ -506,6 +507,18 @@
                 showButton("encounter2button", "2");
                 showButton("encounter3button", "3: Simmumah / Final Boss");
             }
+
+            if (activityname=="Sundered Doctrine")
+            {
+                enableDifficultybuttons()
+                activity="se";
+                showButton("encounter1button", "1: Flooded Inspection");
+                showButton("encounter2button", "Chest1");
+                showButton("encounter2hbutton", "2: Zoetic Lockset");
+                showButton("encounter3button", "Chest 2");
+                showButton("encounter4button", "3: Kerrev, The Erased");
+            }
+
             if (activityname=="The Final Shape")
             {
                 enableDifficultybuttons();
